@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Title of the document</title>
+    <style>
+        .box {
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        input[type=checkbox] {
+            visibility: hidden;
+        }
+        .mark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background-color: #999999;
+            border-radius: 100px;
+        }
+        .box:hover input+.mark {
+            background-color: #1c87c9;
+        }
+        .box input:active+.mark {
+            background-color: #ffcc00;
+        }
+        .box input:checked+.mark {
+            background-color: #8ebf42;
+        }
+        .mark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+        .box input:checked+.mark:after {
+            display: block;
+        }
+        .box .mark:after {
+            left: 8px;
+            bottom: 5px;
+            width: 6px;
+            height: 12px;
+            border: solid blue;
+            border-width: 0 3px 4px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <label class="box">HTML
+            <input type="checkbox">
+            <span class="mark"></span>
+        </label>
+        <label class="box">CSS
+            <input type="checkbox" checked="checked">
+            <span class="mark"></span>
+        </label>
+        <label class="box">JavaScript
+            <input type="checkbox">
+            <span class="mark"></span>
+        </label>
+        <label class="box">PHP
+            <input type="checkbox">
+            <span class="mark"></span>
+        </label>
+    </form>
+</body>
+
+</html>
