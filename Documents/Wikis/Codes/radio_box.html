@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Title of the document</title>
+  <style>
+    div{
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 5px;
+    }
+
+    label {
+      margin-right: 15px;
+      line-height: 32px;
+    }
+
+    input {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+
+      border-radius: 100%;
+      width: 16px;
+      height: 16px;
+
+      border: 2px solid #999;
+      transition: 0.2s all linear;
+      margin-right: 5px;
+      background-color: burlywood;
+      position: relative;
+      top: 4px;
+    }
+    input:checked {
+      border: 6px solid rgb(96, 96, 243);
+    }
+  </style>
+</head>
+
+<body>
+  <form>
+    <input id="one" type="radio" name="radios" value="html">
+    <label for="html">HTML</label>
+    <input id="two" type="radio" name="radios" value="css">
+    <label for="css">CSS</label>
+    <input id="three" type="radio" name="radios" value="javascript">
+    <label for="javascript">JavaScript</label>
+    <input id="four" type="radio" name="radios" value="php">
+    <label for="php">PHP</label>
+  </form>
+</body>
+
+</html>
